@@ -104,7 +104,25 @@
           overflow: hidden;
           transition: all 1s ease-out;
           background-color: whitesmoke;
-          cursor: pointer;
+          position: relative;
+
+          &:hover span {
+            display: flex;
+            cursor: pointer;
+          }
+
+          span {
+            position: absolute;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: $mainColor;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+          }
 
           &:hover {
             transform: scale(1.01);

@@ -41,11 +41,11 @@ const Portfolio = () => {
                 {/* <h1>{portfolio.url}</h1> */}
                 <p>{portfolio.desc}</p>
               </div>
-              <div
-                className="portfolioRight"
-                onClick={() => handleNavigate(portfolio.url)}
-              >
+              <div className="portfolioRight">
                 <img src={portfolio.img} alt="" />
+                <span onClick={() => handleNavigate(portfolio.url)}>
+                  Click to view site
+                </span>
               </div>
             </div>
           ))}
