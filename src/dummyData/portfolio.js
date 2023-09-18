@@ -41,4 +41,11 @@ export const portfolios = [
     desc: "This is a blog app that dishes out latest news to the site visitors. It is full of contents grouped in categories viz:sports,entertainment,music,food,culture,lifestyle,family,religion,technology,business,career,politics,education,investment and lot more. Users can create,comment,edit and delete posts.",
     img: "/assets/filterapp.png",
   },
+  {
+    id: 7,
+    name: "VANILLA E_COMMERCE APP",
+    url: "https://vanillajs-ecommerce-app.netlify.app/",
+    desc: "This is a blog app that dishes out latest news to the site visitors. It is full of contents grouped in categories viz:sports,entertainment,music,food,culture,lifestyle,family,religion,technology,business,career,politics,education,investment and lot more. Users can create,comment,edit and delete posts.",
+    img: "/assets/ecommerceapp.png",
+  },
 ];
