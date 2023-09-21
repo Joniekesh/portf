@@ -33,7 +33,7 @@ const Portfolio = () => {
           {portfolios.map((portfolio, index) => (
             <div
               className="portfolioSlide"
-              key={portfolio.id}
+              key={index}
               //   style={{ flexDirection: index % 2 === 1 && "row-reverse" }}
             >
               <div className="portfolioLeft">
