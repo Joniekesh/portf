@@ -1,8 +1,8 @@
 import TopBar from "./components/topBar/TopBar";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
-import Works from "./components/works/Works";
-import Testimonials from "./components/testimonials/Testimonials";
+// import Works from "./components/works/Works";
+// import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import SideBar from "./components/sideBar/SideBar";
 import "./app.scss";
