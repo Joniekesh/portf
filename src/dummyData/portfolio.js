@@ -25,6 +25,7 @@ export const portfolios = [
     name: "FINMASTER APP",
     url: "https://veegil-media-test.netlify.app",
     desc: "FinMaster is a cutting-edge fintech bank app that empowers you to take control of your finances like never before. With its robust features and user-friendly interface, FinMaster provides a seamless banking experience right at your fingertips. From managing your accounts and budgeting to making secure transactions, FinMaster is your ultimate financial companion.",
+    img: "/assets/bankapp.png",
   },
   {
     id: 5,
