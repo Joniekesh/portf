@@ -21,11 +21,8 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio" id="portfolio">
-      <div className="logoContainer">
-        <h1 className="portfolioLogo">PORTFOLIO</h1>
-        <span className="line"></span>
-      </div>
-      <div className="portfolioItems">
+      <div className="portfolioContainer">
+        <h1>PORTFOLIO</h1>
         <div
           className="portfolioSlider"
           style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
@@ -39,7 +36,7 @@ const Portfolio = () => {
               <div className="portfolioLeft">
                 <h2>{portfolio.name}</h2>
                 {/* <h1>{portfolio.url}</h1> */}
-                <p>{portfolio.desc}</p>
+                <p>{portfolio.desc.slice(0, 200)}...</p>
               </div>
               <div className="portfolioRight">
                 <img src={portfolio.img} alt="" />
@@ -50,7 +47,6 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-
         <div className="navButtons">
           <button onClick={() => handleClick("left")}>
             <i className="fa-solid fa-arrow-left arrow left"></i>
@@ -58,33 +54,6 @@ const Portfolio = () => {
           <button onClick={() => handleClick()}>
             <i className="fa-solid fa-arrow-right arrow right"></i>
           </button>
-        </div>
-        <div
-          className="circles"
-          style={{
-            display: "flex",
-            gap: "10px",
-            textAlign: "center",
-            border: "1px solid rgb(7, 35, 46)",
-            width: "max-content",
-            padding: "6px",
-            borderRadius: "5px",
-            marginLeft: "20px",
-          }}
-        >
-          {portfolios.map((portfolio, index) => (
-            <span
-              onClick={() => setCurrentSlide(index)}
-              style={{
-                width: "16px",
-                height: "16px",
-                backgroundColor: index === currentSlide ? "teal" : "gray",
-                borderRadius: "50%",
-                cursor: "pointer",
-                zIndex: 1,
-              }}
-            ></span>
-          ))}
         </div>
       </div>
     </div>
