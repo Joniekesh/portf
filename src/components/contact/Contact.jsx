@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const SERVICE = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const TEMPLATE = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -13,13 +14,17 @@ const Contact = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
+    setLoading(true);
     emailjs.sendForm(SERVICE, TEMPLATE, formRef.current, USER).then(
       (result) => {
         console.log(result.text);
         setDone(true);
+        setLoading(false);
       },
       (error) => {
         console.log(error.text);
+        setDone(false);
+        setLoading(false);
       }
     );
   };
@@ -58,9 +63,9 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-          <button type="submit">SEND</button>
+          <button type="submit">{loading ? "Loading..." : "SEND"}</button>
           {done && (
-            <span style={{ color: "green" }}>
+            <span style={{ color: "green", textAlign: "center" }}>
               Email sent. You will receive a reply soon <br />
               Thank You!
             </span>
